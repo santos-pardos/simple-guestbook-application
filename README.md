@@ -35,14 +35,14 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
 
 
 ### **Database Setup**:
-    - Create a new AWS MySQL in RDS.
-    - Import the provided `guestbook.sql` file to set up the necessary table.
+    Create a new AWS MySQL in RDS.
+    Import the provided `guestbook.sql` file to set up the necessary table.
   
 ```
      mysql -h TU_ENDPOINT_RDS -P 3306 -u TU_USUARIO_RDS -p < guestbook.sql
 ```
 
-     - Alternativa, instalar mariadb en local para crear un monolito
+     Alternativa, instalar mariadb en local para crear un monolito
 ```
      sudo dnf install -y mariadb105-server
      sudo systemctl enable --now mariadb
