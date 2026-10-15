@@ -43,7 +43,7 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
      ```
 
      - Alternativa, instalar mariadb en local para crear un monolito
-     ```sh
+      ```sh
      sudo dnf install -y mariadb105-server
      sudo systemctl enable --now mariadb
      sudo systemctl status mariadb --no-pager
@@ -51,11 +51,11 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
      ```
      
      ```sh
-    CREATE DATABASE guestbook CHARACTER SET utf8mb4;
+     CREATE DATABASE guestbook CHARACTER SET utf8mb4;
 
-    CREATE USER 'guestbook'@'localhost' IDENTIFIED BY 'UnaClaveSegura_2026!';
-    GRANT ALL PRIVILEGES ON guestbook.* TO 'guestbook'@'localhost';
-    FLUSH PRIVILEGES;
+     CREATE USER 'guestbook'@'localhost' IDENTIFIED BY 'UnaClaveSegura_2026!';
+     GRANT ALL PRIVILEGES ON guestbook.* TO 'guestbook'@'localhost';
+     FLUSH PRIVILEGES;
      ```
 
 ### **Configure the Database Connection:**
