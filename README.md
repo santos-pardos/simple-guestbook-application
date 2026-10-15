@@ -74,11 +74,6 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
      ```sh
      http://EC2_PUBLIC_IP/guestbook/
      ```
-**To save messages**, you still need to:
-
-1. Configure the RDS endpoint, username, password, and database name in `/var/www/html/guestbook/config.php`.
-2. Import `guestbook.sql` into RDS.
-3. Allow inbound traffic on **TCP port 80 to EC2** from your IP address and on **TCP port 3306 to RDS** from the EC2 security group.
 
 **Test App**
 ```sh
@@ -87,7 +82,6 @@ curl -i --max-time 15 \
   --data-urlencode "message=Prueba desde EC2" \
   http://127.0.0.1/guestbook/submit.php
 ```
-
 
 ### File Structure
 
