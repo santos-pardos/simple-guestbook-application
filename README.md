@@ -33,6 +33,7 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
     - Import the provided SQL file to set up the necessary tables.
      ```sh
      mysql -u yourusername -p todo_list < guestbook.sql
+     mysql -h TU_ENDPOINT_RDS -P 3306 -u TU_USUARIO_RDS -p < guestbook.sql
      ```
 
 4. **Configure the Database Connection:**
