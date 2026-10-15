@@ -3,6 +3,21 @@ A guestbook application where visitors can leave messages
 
 **Topics**: PHP, MySQL, AJAX, CSS, Guestbook, Web Development
 
+
+## AMI LINUX 2023 - Requirements
+```sh
+sudo dnf upgrade -y
+sudo dnf install -y httpd git php8.3 php8.3-fpm php8.3-pdo php8.3-mysqlnd mariadb105
+sudo systemctl enable --now php-fpm httpd
+```
+```sh
+cd ~
+git clone https://github.com/mah-shamim/simple-guestbook-application.git
+cd simple-guestbook-application
+sudo mkdir -p /var/www/html/guestbook
+sudo cp -r index.html *.php css js /var/www/html/guestbook/
+```
+
 ### Installation Process
 
 1. **Clone the Repository**:
