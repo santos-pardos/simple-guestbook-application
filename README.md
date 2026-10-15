@@ -38,6 +38,7 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
 
 4. **Configure the Database Connection:**
    - Open the `config.php` file and update the database credentials.
+   - sudo nano /var/www/html/guestbook/config.php
      ```php
      <?php
      // config.php
@@ -46,6 +47,10 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
      $password = "yourpassword";
      $dbname = "guestbook_db";
      ```
+     ```sh
+     sudo systemctl restart php-fpm
+     sudo systemctl restart httpd
+      ```
 
 5. **Access the Application:r**
      ```sh
@@ -56,7 +61,7 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
 1. Configure the RDS endpoint, username, password, and database name in `/var/www/html/guestbook/config.php`.
 2. Import `guestbook.sql` into RDS.
 3. Allow inbound traffic on **TCP port 80 to EC2** from your IP address and on **TCP port 3306 to RDS** from the EC2 security group.
-4. sudo systemctl restart httpd
+
 
 ### File Structure
 
