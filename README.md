@@ -42,22 +42,7 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
      mysql -h TU_ENDPOINT_RDS -P 3306 -u TU_USUARIO_RDS -p < guestbook.sql
 ```
 
-     Alternativa, instalar mariadb en local para crear un monolito
-```
-     sudo dnf install -y mariadb105-server
-     sudo systemctl enable --now mariadb
-     sudo systemctl status mariadb --no-pager
-     sudo mariadb
-```
-     
-```
-     CREATE DATABASE guestbook CHARACTER SET utf8mb4;
-
-     CREATE USER 'guestbook'@'localhost' IDENTIFIED BY 'UnaClaveSegura_2026!';
-     GRANT ALL PRIVILEGES ON guestbook.* TO 'guestbook'@'localhost';
-     FLUSH PRIVILEGES;
-``` 
-
+   
 ### **Configure the Database Connection:**
    - Open the `config.php` file and update the database credentials.
    - sudo nano /var/www/html/guestbook/config.php
@@ -104,3 +89,29 @@ simple-guestbook-application/
 └── js/
     └── main.js
 ```
+## Monolito
+```
+sudo dnf upgrade -y
+sudo dnf install -y httpd git php8.3 php8.3-fpm php8.3-pdo php8.3-mysqlnd mariadb105
+sudo systemctl enable --now php-fpm httpd
+```
+```
+cd ~
+git clone https://github.com/mah-shamim/simple-guestbook-application.git
+cd simple-guestbook-application
+sudo mkdir -p /var/www/html/guestbook
+sudo cp -r index.html *.php css js /var/www/html/guestbook/
+```
+```
+     sudo dnf install -y mariadb105-server
+     sudo systemctl enable --now mariadb
+     sudo systemctl status mariadb --no-pager
+     sudo mariadb
+```   
+```
+     CREATE DATABASE guestbook CHARACTER SET utf8mb4;
+
+     CREATE USER 'guestbook'@'localhost' IDENTIFIED BY 'UnaClaveSegura_2026!';
+     GRANT ALL PRIVILEGES ON guestbook.* TO 'guestbook'@'localhost';
+     FLUSH PRIVILEGES;
+``` 
