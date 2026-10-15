@@ -17,6 +17,7 @@ A guestbook application where visitors can leave messages
 | SG-web | TCP 80 entrante |
 | SG-db | TCP 3306 solo desde SG-web |
 
+## Installation Process
 
 ### AMI LINUX 2023 - Requirements
 ```sh
@@ -32,9 +33,8 @@ sudo mkdir -p /var/www/html/guestbook
 sudo cp -r index.html *.php css js /var/www/html/guestbook/
 ```
 
-### Installation Process
 
-1. **Database Setup**:
+### **Database Setup**:
     - Create a new MySQL database.
     - Import the provided `guestbook.sql` file to set up the necessary table.
     - Update the database configuration in `config.php`.
@@ -48,7 +48,7 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
      mysql -h TU_ENDPOINT_RDS -P 3306 -u TU_USUARIO_RDS -p < guestbook.sql
      ```
 
-2. **Configure the Database Connection:**
+### **Configure the Database Connection:**
    - Open the `config.php` file and update the database credentials.
    - sudo nano /var/www/html/guestbook/config.php
      ```php
@@ -64,7 +64,7 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
      sudo systemctl restart httpd
       ```
 
-3. **Access the Application:r**
+### **Access the Application:r**
      ```sh
      http://EC2_PUBLIC_IP/guestbook/
      ```
