@@ -34,7 +34,7 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
 ```
 
 
-### **Database Setup**
+### Database Setup
     Create a new AWS MySQL in RDS.
     Import the provided `guestbook.sql` file to set up the necessary table.
   
