@@ -3,7 +3,6 @@ A guestbook application where visitors can leave messages
 
 **Topics**: PHP, MySQL, AJAX, CSS, Guestbook, Web Development
 
-## Architecture
 ## Arquitectura en AWS
 
 ![Arquitectura AWS de la aplicación Guestbook](Arquitectura.png)
