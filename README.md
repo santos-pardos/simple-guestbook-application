@@ -18,7 +18,7 @@ A guestbook application where visitors can leave messages
 | SG-db | TCP 3306 solo desde SG-web |
 
 
-## AMI LINUX 2023 - Requirements
+### AMI LINUX 2023 - Requirements
 ```sh
 sudo dnf upgrade -y
 sudo dnf install -y httpd git php8.3 php8.3-fpm php8.3-pdo php8.3-mysqlnd mariadb105
