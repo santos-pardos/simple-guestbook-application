@@ -89,7 +89,7 @@ simple-guestbook-application/
 └── js/
     └── main.js
 ```
-## Monolito Install mariadb in EC2
+## Monolith - Install mariadb in EC2
 ```
 sudo dnf install -y mariadb105-server
 sudo systemctl enable --now mariadb
