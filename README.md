@@ -38,19 +38,19 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
     - Create a new AWS MySQL in RDS.
     - Import the provided `guestbook.sql` file to set up the necessary table.
   
-     ```sh
+    ```
      mysql -h TU_ENDPOINT_RDS -P 3306 -u TU_USUARIO_RDS -p < guestbook.sql
      ```
 
      - Alternativa, instalar mariadb en local para crear un monolito
-      ```sh
+    ```
      sudo dnf install -y mariadb105-server
      sudo systemctl enable --now mariadb
      sudo systemctl status mariadb --no-pager
      sudo mariadb
      ```
      
-     ```sh
+   ```
      CREATE DATABASE guestbook CHARACTER SET utf8mb4;
 
      CREATE USER 'guestbook'@'localhost' IDENTIFIED BY 'UnaClaveSegura_2026!';
