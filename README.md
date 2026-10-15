@@ -55,6 +55,7 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
 1. Configure the RDS endpoint, username, password, and database name in `/var/www/html/guestbook/config.php`.
 2. Import `guestbook.sql` into RDS.
 3. Allow inbound traffic on **TCP port 80 to EC2** from your IP address and on **TCP port 3306 to RDS** from the EC2 security group.
+4. sudo systemctl restart httpd
 
 ### File Structure
 
