@@ -16,6 +16,7 @@ A guestbook application where visitors can leave messages
 | Subred privada B | `10.150.4.0/24`: necesaria para el DB subnet group |
 | SG-web | TCP 80 entrante |
 | SG-db | TCP 3306 solo desde SG-web |
+| DB SG | Agrupar dos redes privadas para mariadb rds|
 
 ## Installation Process
 
