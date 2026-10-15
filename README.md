@@ -3,6 +3,21 @@ A guestbook application where visitors can leave messages
 
 **Topics**: PHP, MySQL, AJAX, CSS, Guestbook, Web Development
 
+## Architecture
+## Arquitectura en AWS
+
+![Arquitectura AWS de la aplicación Guestbook](Arquitectura.png)
+
+| Componente | Detalle |
+|---|---|
+| VPC | `10.150.0.0/16` en 2 zonas de disponibilidad |
+| Subred pública A | `10.150.1.0/24`: EC2 (Amazon Linux 2023, Apache + PHP 8.3) |
+| Subred pública B | `10.150.2.0/24`: reserva para escalar |
+| Subred privada A | `10.150.3.0/24`: RDS MySQL Single-AZ |
+| Subred privada B | `10.150.4.0/24`: necesaria para el DB subnet group |
+| SG-web | TCP 80 entrante |
+| SG-db | TCP 3306 solo desde SG-web |
+
 
 ## AMI LINUX 2023 - Requirements
 ```sh
