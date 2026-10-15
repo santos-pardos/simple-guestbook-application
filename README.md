@@ -5,7 +5,7 @@ A guestbook application where visitors can leave messages
 
 ## Arquitectura en AWS
 
-![Arquitectura AWS de la aplicación Guestbook](Arquitectura.png)
+![alt text](Architectura.png)
 
 | Componente | Detalle |
 |---|---|
