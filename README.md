@@ -20,12 +20,12 @@ A guestbook application where visitors can leave messages
 ## Installation Process
 
 ### AMI LINUX 2023 - Requirements
-```sh
+```
 sudo dnf upgrade -y
 sudo dnf install -y httpd git php8.3 php8.3-fpm php8.3-pdo php8.3-mysqlnd mariadb105
 sudo systemctl enable --now php-fpm httpd
 ```
-```sh
+```
 cd ~
 git clone https://github.com/mah-shamim/simple-guestbook-application.git
 cd simple-guestbook-application
@@ -38,25 +38,25 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
     - Create a new AWS MySQL in RDS.
     - Import the provided `guestbook.sql` file to set up the necessary table.
   
-    ```
+
      mysql -h TU_ENDPOINT_RDS -P 3306 -u TU_USUARIO_RDS -p < guestbook.sql
-     ```
+
 
      - Alternativa, instalar mariadb en local para crear un monolito
-    ```
+
      sudo dnf install -y mariadb105-server
      sudo systemctl enable --now mariadb
      sudo systemctl status mariadb --no-pager
      sudo mariadb
-     ```
+
      
-   ```
+
      CREATE DATABASE guestbook CHARACTER SET utf8mb4;
 
      CREATE USER 'guestbook'@'localhost' IDENTIFIED BY 'UnaClaveSegura_2026!';
      GRANT ALL PRIVILEGES ON guestbook.* TO 'guestbook'@'localhost';
      FLUSH PRIVILEGES;
-     ```
+ 
 
 ### **Configure the Database Connection:**
    - Open the `config.php` file and update the database credentials.
