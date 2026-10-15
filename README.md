@@ -46,10 +46,9 @@ sudo cp -r index.html *.php css js /var/www/html/guestbook/
      $dbname = "guestbook_db";
      ```
 
-5. **Start a Local PHP Server:**
-   - Start the PHP built-in server.
+5. **Open Server**
      ```sh
-     php -S localhost:8000
+     http://IP_PUBLICA_EC2/guestbook/.)
      ```
 
 6. **Access the Application:**
